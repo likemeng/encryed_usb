@@ -31,6 +31,9 @@ static const char *TAG = "adc button";
 #define DEFAULT_VREF    1100
 #define NO_OF_SAMPLES   CONFIG_ADC_BUTTON_SAMPLE_TIMES     //Multisampling
 
+// add by kemeng
+#define ADC_BUTTON_WIDTH       ADC_WIDTH_BIT_12
+
 #if CONFIG_IDF_TARGET_ESP32
 #define ADC_BUTTON_WIDTH       ADC_WIDTH_BIT_12
 #elif CONFIG_IDF_TARGET_ESP32S2

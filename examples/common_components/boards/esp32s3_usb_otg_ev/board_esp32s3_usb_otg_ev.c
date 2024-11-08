@@ -25,12 +25,13 @@ static const char *TAG = "Board";
 
 #define DEFAULT_VREF    1100        //Use adc2_vref_to_gpio() to obtain a better estimate
 #define NO_OF_SAMPLES   16          //Multisampling
-
+static const adc_bits_width_t BOARD_ADC_WIDTH = ADC_WIDTH_BIT_12;
 static esp_adc_cal_characteristics_t *adc1_chars = NULL;
-
+//static const adc_bits_width_t BOARD_ADC_WIDTH = ADC_WIDTH_BIT_12;
 #if CONFIG_IDF_TARGET_ESP32S2
 static const adc_bits_width_t BOARD_ADC_WIDTH = ADC_WIDTH_BIT_13;
 #endif
+
 static const adc_atten_t BOARD_ADC_ATTEN = ADC_ATTEN_DB_11;
 static const adc_unit_t BOARD_ADC_UNIT = ADC_UNIT_1;
 
@@ -51,6 +52,8 @@ static button_handle_t s_btn_up_hdl = NULL;
 static button_handle_t s_btn_dw_hdl = NULL;
 static button_handle_t s_btn_menu_hdl = NULL;
 
+
+/*
 static void _check_efuse(void)
 {
 #if CONFIG_IDF_TARGET_ESP32S2
@@ -62,6 +65,18 @@ static void _check_efuse(void)
 #else
 #error "This example is configured for ESP32S2."
 #endif
+}
+*/
+
+
+static void _check_efuse(void)
+{
+    if (esp_adc_cal_check_efuse(ESP_ADC_CAL_VAL_EFUSE_TP) == ESP_OK) {
+        printf("eFuse Two Point: Supported\n");
+    } else {
+        printf("Cannot retrieve eFuse Two Point calibration values. Default calibration values will be used.\n");
+    }
+
 }
 
 static void _print_char_val_type(esp_adc_cal_value_t val_type)

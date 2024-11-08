@@ -423,11 +423,10 @@ static esp_err_t delete_post_handler(httpd_req_t *req)
     }
 
     ESP_LOGI(TAG, "Deleting file : %s", filename);
+    ESP_LOGI(TAG, "filepath : %s", filepath);
     /* Delete file */
-    ESP_LOGI(TAG, "%s",filepath);
-    remove(filepath);
-    //unlink(filepath);
-
+    unlink(filepath);
+    ESP_LOGI(TAG, "filepath : %s", filepath);
     /* Redirect onto root to see the updated file list */
     httpd_resp_set_status(req, "303 See Other");
     httpd_resp_set_hdr(req, "Location", "/");
