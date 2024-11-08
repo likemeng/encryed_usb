@@ -1,0 +1,940 @@
+使用esp32s2 制作开发板
+https://blog.csdn.net/rentong123/article/details/120316443
+
+'"C:\Espressif\idf_cmd_init.bat"' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+C:\Users\Administrator\Desktop>idf
+'idf' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+C:\Users\Administrator\Desktop>
+C:\Users\Administrator\Desktop>
+C:\Users\Administrator\Desktop>
+C:\Users\Administrator\Desktop>cd ..
+
+C:\Users\Administrator>dir
+驱动器 C 中的卷没有标签。
+卷的序列号是 4E1A-918F
+
+C:\Users\Administrator 的目录
+
+2024/11/01  15:01    <DIR>          .
+2024/11/01  15:01    <DIR>          ..
+2019/11/22  18:31    <DIR>          .android
+2023/09/25  19:11    <DIR>          .config
+2020/01/02  11:33    <DIR>          .dotnet
+2022/02/10  11:36    <DIR>          .espressif
+2022/11/22  12:16               162 .gitconfig
+2019/11/22  18:15    <DIR>          .gradle
+2020/02/21  16:36    <DIR>          .lldb
+2022/08/29  13:48    <DIR>          .local
+2021/05/12  15:40    <DIR>          .m2
+2022/07/08  19:05    <DIR>          .ms-ad
+2019/12/28  22:34    <DIR>          .msf4
+2022/12/03  12:37    <DIR>          .pyarmor
+2021/03/05  15:34    <DIR>          .PyCharmCE2018.3
+2024/10/23  15:28    <DIR>          .ssh
+2024/07/04  10:31    <DIR>          .suwell
+2023/06/15  18:20    <DIR>          .tooling
+2023/12/06  16:07    <DIR>          .vscode
+2022/09/07  19:19    <DIR>          .zenmap
+2022/02/14  13:13    <DIR>          2022kpi
+2020/11/10  10:23    <DIR>          3D Objects
+2021/11/18  16:21    <DIR>          996
+2022/08/26  22:42             2,704 aes.txt
+2022/08/29  15:49             2,688 aes_out.txt
+2022/08/27  00:14             2,704 aes_out2.txt
+2021/07/08  12:09    <DIR>          altium
+2019/11/29  16:34    <DIR>          AndroidStudioProjects
+2019/11/21  18:09    <DIR>          Andy
+2020/05/09  16:17    <DIR>          Antox
+2020/02/21  16:34    <DIR>          ApkProjects
+2020/04/17  20:02    <DIR>          assets
+2021/09/01  16:57    <DIR>          bzip2
+2020/04/17  20:02    <DIR>          com
+2020/11/10  10:23    <DIR>          Contacts
+2023/03/27  12:59    <DIR>          cursor-tutor
+2023/05/05  18:13    <DIR>          deepin-anything
+2023/05/17  16:42    <DIR>          deepin-boot-maker
+2023/05/16  14:13    <DIR>          deepin-log-viewer
+2024/11/01  15:27    <DIR>          Desktop
+2022/12/03  12:37    <DIR>          dist
+2024/08/01  11:13    <DIR>          Documents
+2024/10/31  21:17    <DIR>          Downloads
+2020/07/01  20:50    <DIR>          Dumps
+2024/10/31  16:33    <DIR>          esp-idf-v4.4-wifi-u-error
+2020/11/10  10:23    <DIR>          Favorites
+2022/04/22  13:57    <DIR>          fotiaoqiang
+2019/09/08  18:24    <DIR>          Funshion
+2024/01/30  18:01    <DIR>          go
+2019/12/04  11:07    <DIR>          haha
+2019/11/08  10:59    <DIR>          httpfake
+2019/11/21  16:43    <DIR>          jianshi
+2020/04/17  20:02    <DIR>          lib
+2020/11/10  10:23    <DIR>          Links
+2020/04/17  20:02    <DIR>          META-INF
+2021/08/04  15:23    <DIR>          mimikatz
+2019/10/30  21:58    <DIR>          MS17-010
+2023/05/04  20:39    <DIR>          Music
+2019/11/22  12:01    <DIR>          MyBookshelf
+2021/05/12  15:23    <DIR>          ofdrw
+2019/11/03  20:02    <DIR>          OneDrive
+2022/08/29  09:47               128 out.txt
+2024/11/01  15:01           181,440 output.pdf
+2024/11/01  15:01                17 output.txt
+2022/08/26  23:01                16 pass.txt
+2024/06/21  10:37    <DIR>          Pictures
+2022/08/29  15:46               120 plain
+2022/07/12  21:04    <DIR>          P图
+2023/03/07  14:39               151 qs3JcVU4hJQE7GgD
+2020/04/17  20:02    <DIR>          res
+2020/11/10  10:23    <DIR>          Saved Games
+2020/11/10  10:23    <DIR>          Searches
+2023/12/06  15:38           368,652 shodan_results.txt
+2020/01/02  11:53    <DIR>          source
+2022/08/26  22:12               887 test.key
+2022/08/26  22:00               128 test.txt
+2022/11/22  12:12    <DIR>          update-manager
+2024/07/20  22:12    <DIR>          Videos
+2021/08/18  16:43    <DIR>          winafl
+2022/12/17  12:04    <DIR>          Yinxiang Biji
+2021/08/27  19:40    <DIR>          zip
+2021/07/08  12:10    <DIR>          新建文件夹
+2021/11/20  10:44    <DIR>          新建文件夹 (2)
+2022/03/31  16:15    <DIR>          新建文件夹 (3)
+              13 个文件        559,797 字节
+              71 个目录  1,782,517,760 可用字节
+
+C:\Users\Administrator>cd esp-idf-v4.4-wifi-u-error
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error>dir
+驱动器 C 中的卷没有标签。
+卷的序列号是 4E1A-918F
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error 的目录
+
+2024/10/31  16:33    <DIR>          .
+2024/10/31  16:33    <DIR>          ..
+2022/02/01  16:41               785 .editorconfig
+2022/02/01  16:41             9,292 .flake8
+2024/10/31  20:36    <DIR>          .git
+2024/10/31  16:29    <DIR>          .github
+2022/02/01  16:41             1,513 .gitignore
+2024/10/31  16:29    <DIR>          .gitlab
+2022/02/01  16:41             5,657 .gitlab-ci.yml
+2022/02/01  16:41             3,592 .gitmodules
+2022/02/01  16:41             1,011 .mypy.ini
+2022/02/01  16:41             4,206 .pre-commit-config.yaml
+2022/02/01  16:41            19,523 .pylintrc
+2022/02/01  16:41               559 .readthedocs.yml
+2022/02/01  16:41               739 add_path.sh
+2024/10/31  16:29    <DIR>          build
+2022/02/01  16:41             8,545 CMakeLists.txt
+2024/10/31  16:30    <DIR>          components
+2022/02/01  16:41             2,614 CONTRIBUTING.rst
+2024/10/31  16:30    <DIR>          docs
+2024/10/31  16:30    <DIR>          esp
+2024/10/31  16:32    <DIR>          esp-iot-solution
+2024/10/31  16:33    <DIR>          examples
+2022/02/01  16:41             3,399 export.bat
+2022/02/01  16:41             2,511 export.fish
+2022/02/01  16:41             3,158 export.ps1
+2022/02/01  16:41             6,482 export.sh
+2022/02/01  16:41             1,458 install.bat
+2022/02/01  16:41               595 install.fish
+2022/02/01  16:41               650 install.ps1
+2022/02/01  16:41               590 install.sh
+2022/02/01  16:41            19,239 Kconfig
+2022/02/01  16:41            11,560 LICENSE
+2024/10/31  16:33    <DIR>          make
+2022/02/01  16:41             7,876 README.md
+2022/02/01  16:41             7,863 README_CN.md
+2022/02/01  16:41             1,925 requirements.txt
+2022/02/01  16:41             1,987 sdkconfig.rename
+2022/02/01  16:41               594 sonar-project.properties
+2022/02/01  16:41             3,817 SUPPORT_POLICY.md
+2022/02/01  16:41             3,320 SUPPORT_POLICY_CN.md
+2024/10/31  16:33    <DIR>          tools
+              29 个文件        135,060 字节
+              13 个目录  1,782,452,224 可用字节
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error>.\export.bat
+Setting IDF_PATH: C:\Users\Administrator\esp-idf-v4.4-wifi-u-error
+
+Adding ESP-IDF tools to PATH...
+    C:\Espressif\tools\xtensa-esp32-elf\esp-2021r2-patch2-8.4.0\xtensa-esp32-elf\bin
+    C:\Espressif\tools\xtensa-esp32s2-elf\esp-2021r2-patch2-8.4.0\xtensa-esp32s2-elf\bin
+    C:\Espressif\tools\xtensa-esp32s3-elf\esp-2021r2-patch2-8.4.0\xtensa-esp32s3-elf\bin
+    C:\Espressif\tools\riscv32-esp-elf\esp-2021r2-patch2-8.4.0\riscv32-esp-elf\bin
+    C:\Espressif\tools\esp32ulp-elf\2.28.51-esp-20191205\esp32ulp-elf-binutils\bin
+    C:\Espressif\tools\esp32s2ulp-elf\2.28.51-esp-20191205\esp32s2ulp-elf-binutils\bin
+    C:\Espressif\tools\cmake\3.20.3\bin
+    C:\Espressif\tools\openocd-esp32\v0.11.0-esp32-20211220\openocd-esp32\bin
+    C:\Espressif\tools\ninja\1.10.2\
+    C:\Espressif\tools\idf-exe\1.0.3\
+    C:\Espressif\tools\ccache\4.3\ccache-4.3-windows-64
+    C:\Espressif\tools\dfu-util\0.9\dfu-util-0.9-win64
+    C:\Espressif\python_env\idf4.4_py3.10_env\Scripts
+    C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\tools
+
+Checking if Python packages are up to date...
+Python requirements from C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\requirements.txt are satisfied.
+
+Done! You can now compile ESP-IDF projects.
+Go to the project directory and run:
+
+  idf.py build
+
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error>ce esp-iot-solution
+'ce' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error>dir
+驱动器 C 中的卷没有标签。
+卷的序列号是 4E1A-918F
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error 的目录
+
+2024/10/31  16:33    <DIR>          .
+2024/10/31  16:33    <DIR>          ..
+2022/02/01  16:41               785 .editorconfig
+2022/02/01  16:41             9,292 .flake8
+2024/10/31  20:36    <DIR>          .git
+2024/10/31  16:29    <DIR>          .github
+2022/02/01  16:41             1,513 .gitignore
+2024/10/31  16:29    <DIR>          .gitlab
+2022/02/01  16:41             5,657 .gitlab-ci.yml
+2022/02/01  16:41             3,592 .gitmodules
+2022/02/01  16:41             1,011 .mypy.ini
+2022/02/01  16:41             4,206 .pre-commit-config.yaml
+2022/02/01  16:41            19,523 .pylintrc
+2022/02/01  16:41               559 .readthedocs.yml
+2022/02/01  16:41               739 add_path.sh
+2024/10/31  16:29    <DIR>          build
+2022/02/01  16:41             8,545 CMakeLists.txt
+2024/10/31  16:30    <DIR>          components
+2022/02/01  16:41             2,614 CONTRIBUTING.rst
+2024/10/31  16:30    <DIR>          docs
+2024/10/31  16:30    <DIR>          esp
+2024/10/31  16:32    <DIR>          esp-iot-solution
+2024/10/31  16:33    <DIR>          examples
+2022/02/01  16:41             3,399 export.bat
+2022/02/01  16:41             2,511 export.fish
+2022/02/01  16:41             3,158 export.ps1
+2022/02/01  16:41             6,482 export.sh
+2022/02/01  16:41             1,458 install.bat
+2022/02/01  16:41               595 install.fish
+2022/02/01  16:41               650 install.ps1
+2022/02/01  16:41               590 install.sh
+2022/02/01  16:41            19,239 Kconfig
+2022/02/01  16:41            11,560 LICENSE
+2024/10/31  16:33    <DIR>          make
+2022/02/01  16:41             7,876 README.md
+2022/02/01  16:41             7,863 README_CN.md
+2022/02/01  16:41             1,925 requirements.txt
+2022/02/01  16:41             1,987 sdkconfig.rename
+2022/02/01  16:41               594 sonar-project.properties
+2022/02/01  16:41             3,817 SUPPORT_POLICY.md
+2022/02/01  16:41             3,320 SUPPORT_POLICY_CN.md
+2024/10/31  16:33    <DIR>          tools
+              29 个文件        135,060 字节
+              13 个目录  1,782,390,784 可用字节
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error>cd esp-iot-solution
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution>dir
+驱动器 C 中的卷没有标签。
+卷的序列号是 4E1A-918F
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution 的目录
+
+2024/10/31  16:32    <DIR>          .
+2024/10/31  16:32    <DIR>          ..
+2022/02/10  15:57               757 .gitignore
+2022/02/10  15:57             3,258 .gitlab-ci.yml
+2022/02/10  15:57               317 .gitmodules
+2022/02/10  15:57               431 .readthedocs.yml
+2024/10/31  16:31    <DIR>          .vscode
+2022/02/10  15:57             1,754 component.cmake
+2022/02/10  15:57             1,369 component.mk
+2024/10/31  16:31    <DIR>          components
+2022/02/10  15:57             2,287 CONTRIBUTING.rst
+2024/10/31  16:32    <DIR>          docs
+2024/10/31  16:32    <DIR>          examples
+2022/02/10  15:57             3,484 issue_template.md
+2022/02/10  15:57            11,560 LICENSE
+2022/02/10  15:57             6,218 README.md
+2022/02/10  15:57             5,686 README_CN.md
+2022/02/10  15:57             1,567 sdkconfig.rename
+2024/10/31  16:32    <DIR>          tools
+              12 个文件         38,688 字节
+               7 个目录  1,781,866,496 可用字节
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution>cd examples
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples>dir
+驱动器 C 中的卷没有标签。
+卷的序列号是 4E1A-918F
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples 的目录
+
+2024/10/31  16:32    <DIR>          .
+2024/10/31  16:32    <DIR>          ..
+2024/10/31  16:32    <DIR>          audio
+2024/10/31  16:32    <DIR>          check_pedestrian_flow
+2024/10/31  16:32    <DIR>          common_components
+2024/10/31  16:32    <DIR>          hmi
+2024/10/31  16:32    <DIR>          screen
+2024/10/31  16:32    <DIR>          sensors
+2024/10/31  16:32    <DIR>          usb
+               0 个文件              0 字节
+               9 个目录  1,781,735,424 可用字节
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples>cd usb
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb>dir
+驱动器 C 中的卷没有标签。
+卷的序列号是 4E1A-918F
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb 的目录
+
+2024/10/31  16:32    <DIR>          .
+2024/10/31  16:32    <DIR>          ..
+2024/10/31  16:32    <DIR>          device
+2024/10/31  16:32    <DIR>          host
+2024/10/31  16:32    <DIR>          idf_usb_support_patch
+               0 个文件              0 字节
+               5 个目录  1,781,731,328 可用字节
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb>cd device
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device>dir
+驱动器 C 中的卷没有标签。
+卷的序列号是 4E1A-918F
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device 的目录
+
+2024/10/31  16:32    <DIR>          .
+2024/10/31  16:32    <DIR>          ..
+2024/10/31  16:32    <DIR>          usb_dongle
+2024/10/31  16:32    <DIR>          usb_hid_device
+2024/10/31  20:32    <DIR>          usb_msc_wireless_disk
+2024/10/31  16:32    <DIR>          usb_msc_wireless_disk-error
+2024/10/31  16:32    <DIR>          usb_uart_bridge
+               0 个文件              0 字节
+               7 个目录  1,781,731,328 可用字节
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device>cd usb_msc_wireless_disk
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>dir
+驱动器 C 中的卷没有标签。
+卷的序列号是 4E1A-918F
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk 的目录
+
+2024/10/31  20:32    <DIR>          .
+2024/10/31  20:32    <DIR>          ..
+2024/11/01  15:28    <DIR>          build
+2022/02/10  15:57             1,044 CMakeLists.txt
+2024/10/31  20:31               216 dependencies.lock
+2024/10/31  16:32    <DIR>          main
+2022/02/10  15:57               313 partitions_example.csv
+2022/02/10  15:57             2,976 README.md
+2024/10/31  20:32            43,873 sdkconfig
+2022/02/10  15:57             1,175 sdkconfig.defaults
+2024/10/31  20:31            38,534 sdkconfig.old
+               7 个文件         88,131 字节
+               4 个目录  1,781,358,592 可用字节
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>idf.py build
+Executing action: all (aliases: build)
+Running ninja in directory c:\users\administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build
+Executing "ninja all"...
+[1/4] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc...tor/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin"usb_wireless_disk.bin binary size 0xba4d0 bytes. Smallest app partition is 0x100000 bytes. 0x45b30 bytes (27%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5190 bytes. 0x2e70 bytes (36%) free.
+
+Project build complete. To flash, run this command:
+C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe ..\..\..\..\..\components\esptool_py\esptool\esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32s3  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 build\bootloader\bootloader.bin 0x8000 build\partition_table\partition-table.bin 0x10000 build\usb_wireless_disk.bin
+or run 'idf.py -p (PORT) flash'
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>idf.py -p COM3 flash
+Executing action: flash
+Running ninja in directory c:\users\administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build
+Executing "ninja flash"...
+[1/5] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc...tor/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin"usb_wireless_disk.bin binary size 0xba4d0 bytes. Smallest app partition is 0x100000 bytes. 0x45b30 bytes (27%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5190 bytes. 0x2e70 bytes (36%) free.
+[2/3] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\components\esptool_py && C:\Espressif\tools\...wireless_disk/build" -P C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/esptool_py/run_serial_tool.cmake"esptool.py esp32s3 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 bootloader/bootloader.bin 0x10000 usb_wireless_disk.bin 0x8000 partition_table/partition-table.bin
+esptool.py v3.2-dev
+Serial port COM3
+Connecting...
+Chip is ESP32-S3
+Features: WiFi, BLE
+Crystal is 40MHz
+MAC: 60:55:f9:f5:82:00
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000cafff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20880 bytes to 13005...
+Writing at 0x00000000... (100 %)
+Wrote 20880 bytes (13005 compressed) at 0x00000000 in 0.4 seconds (effective 411.0 kbit/s)...
+Hash of data verified.
+Compressed 763088 bytes to 477531...
+Writing at 0x00010000... (3 %)
+Writing at 0x00017ba5... (6 %)
+Writing at 0x0002468d... (10 %)
+Writing at 0x0003007d... (13 %)
+Writing at 0x000362f8... (16 %)
+Writing at 0x0003bbb8... (20 %)
+Writing at 0x000411da... (23 %)
+Writing at 0x0004795a... (26 %)
+Writing at 0x0004d5df... (30 %)
+Writing at 0x000530fb... (33 %)
+Writing at 0x000587b9... (36 %)
+Writing at 0x0005dfe2... (40 %)
+Writing at 0x000638d3... (43 %)
+Writing at 0x000693d4... (46 %)
+Writing at 0x0006ef65... (50 %)
+Writing at 0x00073d66... (53 %)
+Writing at 0x00078e0c... (56 %)
+Writing at 0x0007dfa0... (60 %)
+Writing at 0x000834d1... (63 %)
+Writing at 0x000888a9... (66 %)
+Writing at 0x0008e4b9... (70 %)
+Writing at 0x000940d8... (73 %)
+Writing at 0x0009ada4... (76 %)
+Writing at 0x000a04d6... (80 %)
+Writing at 0x000a67d8... (83 %)
+Writing at 0x000aefe2... (86 %)
+Writing at 0x000b71aa... (90 %)
+Writing at 0x000bd66c... (93 %)
+Writing at 0x000c32e6... (96 %)
+Writing at 0x000c91bf... (100 %)
+Wrote 763088 bytes (477531 compressed) at 0x00010000 in 8.5 seconds (effective 716.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 119...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (119 compressed) at 0x00008000 in 0.1 seconds (effective 480.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+Done
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>idf.py build
+Executing action: all (aliases: build)
+Running ninja in directory c:\users\administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build
+Executing "ninja all"...
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5190 bytes. 0x2e70 bytes (36%) free.
+[6/7] Generating binary image from built executable
+esptool.py v3.2-dev
+Merged 2 ELF sections
+Generated C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin
+[7/7] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc...tor/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin"usb_wireless_disk.bin binary size 0xb92a0 bytes. Smallest app partition is 0x100000 bytes. 0x46d60 bytes (28%) free.
+
+Project build complete. To flash, run this command:
+C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe ..\..\..\..\..\components\esptool_py\esptool\esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32s3  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 build\bootloader\bootloader.bin 0x8000 build\partition_table\partition-table.bin 0x10000 build\usb_wireless_disk.bin
+or run 'idf.py -p (PORT) flash'
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>idf.py -p COM3 flash
+Executing action: flash
+Running ninja in directory c:\users\administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build
+Executing "ninja flash"...
+[1/5] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc...tor/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin"usb_wireless_disk.bin binary size 0xb92a0 bytes. Smallest app partition is 0x100000 bytes. 0x46d60 bytes (28%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5190 bytes. 0x2e70 bytes (36%) free.
+[2/3] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\components\esptool_py && C:\Espressif\tools\...wireless_disk/build" -P C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/esptool_py/run_serial_tool.cmake"esptool.py esp32s3 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 bootloader/bootloader.bin 0x10000 usb_wireless_disk.bin 0x8000 partition_table/partition-table.bin
+esptool.py v3.2-dev
+Serial port COM3
+Connecting...
+Chip is ESP32-S3
+Features: WiFi, BLE
+Crystal is 40MHz
+MAC: 60:55:f9:f5:82:00
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000c9fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20880 bytes to 13005...
+Writing at 0x00000000... (100 %)
+Wrote 20880 bytes (13005 compressed) at 0x00000000 in 0.4 seconds (effective 410.1 kbit/s)...
+Hash of data verified.
+Compressed 758432 bytes to 475039...
+Writing at 0x00010000... (3 %)
+Writing at 0x00017ba4... (6 %)
+Writing at 0x0002468d... (10 %)
+Writing at 0x000300f1... (13 %)
+Writing at 0x0003637b... (17 %)
+Writing at 0x0003bc6e... (20 %)
+Writing at 0x000412a0... (24 %)
+Writing at 0x00047a24... (27 %)
+Writing at 0x0004d67e... (31 %)
+Writing at 0x000531ba... (34 %)
+Writing at 0x00058810... (37 %)
+Writing at 0x0005e09f... (41 %)
+Writing at 0x00063971... (44 %)
+Writing at 0x0006949e... (48 %)
+Writing at 0x0006eff3... (51 %)
+Writing at 0x00073de5... (55 %)
+Writing at 0x00078eee... (58 %)
+Writing at 0x0007e042... (62 %)
+Writing at 0x0008360a... (65 %)
+Writing at 0x000889b8... (68 %)
+Writing at 0x0008e523... (72 %)
+Writing at 0x0009429e... (75 %)
+Writing at 0x0009ae32... (79 %)
+Writing at 0x000a054f... (82 %)
+Writing at 0x000a6b90... (86 %)
+Writing at 0x000af3ed... (89 %)
+Writing at 0x000b7611... (93 %)
+Writing at 0x000bd2c4... (96 %)
+Writing at 0x000c2f2b... (100 %)
+Wrote 758432 bytes (475039 compressed) at 0x00010000 in 8.5 seconds (effective 714.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 119...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (119 compressed) at 0x00008000 in 0.0 seconds (effective 502.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+Done
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>idf.py build
+Executing action: all (aliases: build)
+Running ninja in directory c:\users\administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build
+Executing "ninja all"...
+[3/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5190 bytes. 0x2e70 bytes (36%) free.
+[6/7] Generating binary image from built executable
+esptool.py v3.2-dev
+Merged 2 ELF sections
+Generated C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin
+[7/7] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc...tor/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin"usb_wireless_disk.bin binary size 0xba4d0 bytes. Smallest app partition is 0x100000 bytes. 0x45b30 bytes (27%) free.
+
+Project build complete. To flash, run this command:
+C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe ..\..\..\..\..\components\esptool_py\esptool\esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32s3  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 build\bootloader\bootloader.bin 0x8000 build\partition_table\partition-table.bin 0x10000 build\usb_wireless_disk.bin
+or run 'idf.py -p (PORT) flash'
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+
+
+
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>idf.py build
+Executing action: all (aliases: build)
+Running ninja in directory c:\users\administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build
+Executing "ninja all"...
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5190 bytes. 0x2e70 bytes (36%) free.
+[6/7] Generating binary image from built executable
+esptool.py v3.2-dev
+Merged 2 ELF sections
+Generated C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin
+[7/7] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc...tor/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin"usb_wireless_disk.bin binary size 0xba5b0 bytes. Smallest app partition is 0x100000 bytes. 0x45a50 bytes (27%) free.
+
+Project build complete. To flash, run this command:
+C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe ..\..\..\..\..\components\esptool_py\esptool\esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32s3  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 build\bootloader\bootloader.bin 0x8000 build\partition_table\partition-table.bin 0x10000 build\usb_wireless_disk.bin
+or run 'idf.py -p (PORT) flash'
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>idf.py -p COM3 flash
+Executing action: flash
+Running ninja in directory c:\users\administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build
+Executing "ninja flash"...
+[1/5] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc...tor/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin"usb_wireless_disk.bin binary size 0xba5b0 bytes. Smallest app partition is 0x100000 bytes. 0x45a50 bytes (27%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5190 bytes. 0x2e70 bytes (36%) free.
+[2/3] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\components\esptool_py && C:\Espressif\tools\...wireless_disk/build" -P C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/esptool_py/run_serial_tool.cmake"esptool.py esp32s3 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 bootloader/bootloader.bin 0x10000 usb_wireless_disk.bin 0x8000 partition_table/partition-table.bin
+esptool.py v3.2-dev
+Serial port COM3
+Traceback (most recent call last):
+  File "C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\components\esptool_py\esptool\esptool.py", line 4930, in <module>
+    _main()
+  File "C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\components\esptool_py\esptool\esptool.py", line 4923, in _main
+    main()
+  File "C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\components\esptool_py\esptool\esptool.py", line 4370, in main
+    esp = esp or get_default_connected_device(ser_list, port=args.port, connect_attempts=args.connect_attempts,
+  File "C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\components\esptool_py\esptool\esptool.py", line 122, in get_default_connected_device
+    _esp = chip_class(each_port, initial_baud, trace)
+  File "C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\components\esptool_py\esptool\esptool.py", line 326, in __init__
+    self._port = serial.serial_for_url(port)
+  File "C:\Espressif\python_env\idf4.4_py3.10_env\lib\site-packages\serial\__init__.py", line 90, in serial_for_url
+    instance.open()
+  File "C:\Espressif\python_env\idf4.4_py3.10_env\lib\site-packages\serial\serialwin32.py", line 64, in open
+    raise SerialException("could not open port {!r}: {!r}".format(self.portstr, ctypes.WinError()))
+serial.serialutil.SerialException: could not open port 'COM3': FileNotFoundError(2, '系统找不到指定的文件。', None, 2)
+CMake Error at run_serial_tool.cmake:56 (message):
+  C:/Espressif/python_env/idf4.4_py3.10_env/Scripts/python.exe
+  C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/esptool_py/esptool/esptool.py
+  --chip esp32s3 failed
+
+
+FAILED: CMakeFiles/flash
+cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\components\esptool_py && C:\Espressif\tools\cmake\3.20.3\bin\cmake.exe -D IDF_PATH="C:/Users/Administrator/esp-idf-v4.4-wifi-u-error" -D SERIAL_TOOL="C:/Espressif/python_env/idf4.4_py3.10_env/Scripts/python.exe C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/esptool_py/esptool/esptool.py --chip esp32s3" -D SERIAL_TOOL_ARGS="--before=default_reset --after=hard_reset write_flash @flash_args" -D WORKING_DIRECTORY="C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build" -P C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/esptool_py/run_serial_tool.cmake"
+ninja: build stopped: subcommand failed.
+ninja failed with exit code 1
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>idf.py -p COM3 flash
+Executing action: flash
+Running ninja in directory c:\users\administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build
+Executing "ninja flash"...
+[1/5] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc...tor/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin"usb_wireless_disk.bin binary size 0xba5b0 bytes. Smallest app partition is 0x100000 bytes. 0x45a50 bytes (27%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5190 bytes. 0x2e70 bytes (36%) free.
+[2/3] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\components\esptool_py && C:\Espressif\tools\...wireless_disk/build" -P C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/esptool_py/run_serial_tool.cmake"esptool.py esp32s3 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 bootloader/bootloader.bin 0x10000 usb_wireless_disk.bin 0x8000 partition_table/partition-table.bin
+esptool.py v3.2-dev
+Serial port COM3
+Connecting...
+Chip is ESP32-S3
+Features: WiFi, BLE
+Crystal is 40MHz
+MAC: 60:55:f9:f5:82:00
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000cafff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20880 bytes to 13005...
+Writing at 0x00000000... (100 %)
+Wrote 20880 bytes (13005 compressed) at 0x00000000 in 0.4 seconds (effective 405.8 kbit/s)...
+Hash of data verified.
+Compressed 763312 bytes to 477665...
+Writing at 0x00010000... (3 %)
+Writing at 0x00017bd4... (6 %)
+Writing at 0x000246ad... (10 %)
+Writing at 0x0003009a... (13 %)
+Writing at 0x00036339... (16 %)
+Writing at 0x0003bbca... (20 %)
+Writing at 0x00041202... (23 %)
+Writing at 0x00047950... (26 %)
+Writing at 0x0004d5e4... (30 %)
+Writing at 0x000530bf... (33 %)
+Writing at 0x000587d1... (36 %)
+Writing at 0x0005dff0... (40 %)
+Writing at 0x000638ea... (43 %)
+Writing at 0x000693d0... (46 %)
+Writing at 0x0006ef72... (50 %)
+Writing at 0x00073d78... (53 %)
+Writing at 0x00078e21... (56 %)
+Writing at 0x0007dfae... (60 %)
+Writing at 0x000834ed... (63 %)
+Writing at 0x000888a7... (66 %)
+Writing at 0x0008e4d3... (70 %)
+Writing at 0x000940e9... (73 %)
+Writing at 0x0009adbb... (76 %)
+Writing at 0x000a04e8... (80 %)
+Writing at 0x000a67d2... (83 %)
+Writing at 0x000aeffe... (86 %)
+Writing at 0x000b71d4... (90 %)
+Writing at 0x000bd6a8... (93 %)
+Writing at 0x000c32ff... (96 %)
+Writing at 0x000c91dc... (100 %)
+Wrote 763312 bytes (477665 compressed) at 0x00010000 in 8.6 seconds (effective 711.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 119...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (119 compressed) at 0x00008000 in 0.1 seconds (effective 485.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+Done
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>idf.py build
+Executing action: all (aliases: build)
+Running ninja in directory c:\users\administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build
+Executing "ninja all"...
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5190 bytes. 0x2e70 bytes (36%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/usb_msc_wireless_disk_main.c.obj
+../main/usb_msc_wireless_disk_main.c: In function 'encrypt_dir':
+../main/usb_msc_wireless_disk_main.c:219:32: warning: passing argument 1 of 'remove' from incompatible pointer type [-Wincompatible-pointer-types]
+                         remove(tmp);
+                                ^~~
+In file included from ../../../../../../components/esp_common/include/esp_err.h:17,
+                 from ../../../../../../components/hal/include/hal/cpu_hal.h:20,
+                 from ../../../../../../components/esp_hw_support/include/esp_cpu.h:14,
+                 from ../../../../../../components/esp_hw_support/include/soc/cpu.h:14,
+                 from ../../../../../../components/esp_hw_support/include/soc/spinlock.h:11,
+                 from ../../../../../../components/freertos/port/xtensa/include/freertos/portmacro.h:42,
+                 from ../../../../../../components/freertos/include/freertos/portable.h:51,
+                 from ../../../../../../components/freertos/include/freertos/FreeRTOS.h:63,
+                 from ../main/usb_msc_wireless_disk_main.c:16:
+c:\espressif\tools\xtensa-esp32s3-elf\esp-2021r2-patch2-8.4.0\xtensa-esp32s3-elf\xtensa-esp32s3-elf\sys-include\stdio.h:246:13: note: expected 'const char *' but argument is of type 'FILE *' {aka 'struct __sFILE *'}
+int remove (const char *);
+             ^~~~~~~~~~~~
+[6/7] Generating binary image from built executable
+esptool.py v3.2-dev
+Merged 2 ELF sections
+Generated C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin
+[7/7] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc...tor/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin"usb_wireless_disk.bin binary size 0xba580 bytes. Smallest app partition is 0x100000 bytes. 0x45a80 bytes (27%) free.
+
+Project build complete. To flash, run this command:
+C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe ..\..\..\..\..\components\esptool_py\esptool\esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32s3  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 build\bootloader\bootloader.bin 0x8000 build\partition_table\partition-table.bin 0x10000 build\usb_wireless_disk.bin
+or run 'idf.py -p (PORT) flash'
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>idf.py build
+Executing action: all (aliases: build)
+Running ninja in directory c:\users\administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build
+Executing "ninja all"...
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5190 bytes. 0x2e70 bytes (36%) free.
+[6/7] Generating binary image from built executable
+esptool.py v3.2-dev
+Merged 2 ELF sections
+Generated C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin
+[7/7] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc...tor/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin"usb_wireless_disk.bin binary size 0xba580 bytes. Smallest app partition is 0x100000 bytes. 0x45a80 bytes (27%) free.
+
+Project build complete. To flash, run this command:
+C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe ..\..\..\..\..\components\esptool_py\esptool\esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32s3  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 build\bootloader\bootloader.bin 0x8000 build\partition_table\partition-table.bin 0x10000 build\usb_wireless_disk.bin
+or run 'idf.py -p (PORT) flash'
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>idf.py -p COM3 flash
+Executing action: flash
+Running ninja in directory c:\users\administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build
+Executing "ninja flash"...
+[1/5] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc...tor/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin"usb_wireless_disk.bin binary size 0xba580 bytes. Smallest app partition is 0x100000 bytes. 0x45a80 bytes (27%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5190 bytes. 0x2e70 bytes (36%) free.
+[2/3] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\components\esptool_py && C:\Espressif\tools\...wireless_disk/build" -P C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/esptool_py/run_serial_tool.cmake"esptool.py esp32s3 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 bootloader/bootloader.bin 0x10000 usb_wireless_disk.bin 0x8000 partition_table/partition-table.bin
+esptool.py v3.2-dev
+Serial port COM3
+Connecting...
+Chip is ESP32-S3
+Features: WiFi, BLE
+Crystal is 40MHz
+MAC: 60:55:f9:f5:82:00
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000cafff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20880 bytes to 13005...
+Writing at 0x00000000... (100 %)
+Wrote 20880 bytes (13005 compressed) at 0x00000000 in 0.4 seconds (effective 399.1 kbit/s)...
+Hash of data verified.
+Compressed 763264 bytes to 477690...
+Writing at 0x00010000... (3 %)
+Writing at 0x00017bba... (6 %)
+Writing at 0x000246a9... (10 %)
+Writing at 0x0003009a... (13 %)
+Writing at 0x0003631b... (16 %)
+Writing at 0x0003bba1... (20 %)
+Writing at 0x000411e8... (23 %)
+Writing at 0x00047931... (26 %)
+Writing at 0x0004d5dd... (30 %)
+Writing at 0x000530b1... (33 %)
+Writing at 0x000587cd... (36 %)
+Writing at 0x0005dff2... (40 %)
+Writing at 0x000638e9... (43 %)
+Writing at 0x000693bd... (46 %)
+Writing at 0x0006ef65... (50 %)
+Writing at 0x00073d68... (53 %)
+Writing at 0x00078e0b... (56 %)
+Writing at 0x0007df9a... (60 %)
+Writing at 0x000834cf... (63 %)
+Writing at 0x0008887b... (66 %)
+Writing at 0x0008e4a9... (70 %)
+Writing at 0x00094083... (73 %)
+Writing at 0x0009ad7f... (76 %)
+Writing at 0x000a04a8... (80 %)
+Writing at 0x000a679f... (83 %)
+Writing at 0x000aefd0... (86 %)
+Writing at 0x000b7177... (90 %)
+Writing at 0x000bd64a... (93 %)
+Writing at 0x000c32a8... (96 %)
+Writing at 0x000c9187... (100 %)
+Wrote 763264 bytes (477690 compressed) at 0x00010000 in 8.6 seconds (effective 710.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 119...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (119 compressed) at 0x00008000 in 0.0 seconds (effective 510.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+Done
+
+C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk>idf.py -p COM4 flash
+Executing action: flash
+Running ninja in directory c:\users\administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build
+Executing "ninja flash"...
+[3/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4.4-wifi-u-error\esp-iot-solution\examples\usb\device\usb_msc_wireless_disk\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf4.4_py3.10_env\Scripts\python.exe C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5190 bytes. 0x2e70 bytes (36%) free.
+[6/8] Generating binary image from built executable
+esptool.py v3.2-dev
+Merged 2 ELF sections
+Generated C:/Users/Administrator/esp-idf-v4.4-wifi-u-error/esp-iot-solution/examples/usb/device/usb_msc_wireless_disk/build/usb_wireless_disk.bin
+[7/8] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4..../device/usb_msc_wireless_disk/build/usb_wireless_disk.bin"
+usb_wireless_disk.bin binary size 0xba580 bytes. Smallest app partition is 0x100000 bytes. 0x45a80 bytes (27%) free.
+[7/8] cmd.exe /C "cd /D C:\Users\Administrator\esp-idf-v4....-wifi-u-error/components/esptool_py/run_serial_tool.cmake"
+esptool.py esp32s3 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 bootloader/bootloader.bin 0x10000 usb_wireless_disk.bin 0x8000 partition_table/partition-table.bin
+esptool.py v3.2-dev
+Serial port COM4
+Connecting...
+Chip is ESP32-S3
+Features: WiFi, BLE
+Crystal is 40MHz
+MAC: dc:54:75:d2:49:fc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000cafff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20880 bytes to 13005...
+Writing at 0x00000000... (100 %)
+Wrote 20880 bytes (13005 compressed) at 0x00000000 in 0.4 seconds (effective 442.5 kbit/s)...
+Hash of data verified.
+Compressed 763264 bytes to 477653...
+Writing at 0x00010000... (3 %)
+Writing at 0x00017bb7... (6 %)
+Writing at 0x000246a4... (10 %)
+Writing at 0x0003009a... (13 %)
+Writing at 0x00036341... (16 %)
+Writing at 0x0003bbd2... (20 %)
+Writing at 0x00041201... (23 %)
+Writing at 0x00047956... (26 %)
+Writing at 0x0004d5fb... (30 %)
+Writing at 0x000530e5... (33 %)
+Writing at 0x000587e9... (36 %)
+Writing at 0x0005e00e... (40 %)
+Writing at 0x00063904... (43 %)
+Writing at 0x000693e2... (46 %)
+Writing at 0x0006ef81... (50 %)
+Writing at 0x00073d89... (53 %)
+Writing at 0x00078e29... (56 %)
+Writing at 0x0007dfbc... (60 %)
+Writing at 0x000834eb... (63 %)
+Writing at 0x000888a4... (66 %)
+Writing at 0x0008e4d4... (70 %)
+Writing at 0x000940e1... (73 %)
+Writing at 0x0009adb4... (76 %)
+Writing at 0x000a04e7... (80 %)
+Writing at 0x000a67cb... (83 %)
+Writing at 0x000aeffc... (86 %)
+Writing at 0x000b71a7... (90 %)
+Writing at 0x000bd678... (93 %)
+Writing at 0x000c32d6... (96 %)
+Writing at 0x000c91b3... (100 %)
+Wrote 763264 bytes (477653 compressed) at 0x00010000 in 5.2 seconds (effective 1163.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 119...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (119 compressed) at 0x00008000 in 0.1 seconds (effective 486.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+Done
+
+
