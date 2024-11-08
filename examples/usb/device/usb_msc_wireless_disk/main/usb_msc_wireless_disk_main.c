@@ -294,22 +294,8 @@ void app_main(void)
         }
     
         encrypt_dir();
-
      
         fend=true;
-        //ESP_ERROR_CHECK(tinyusb_driver_install(&tusb_cfg));
-        //ESP_ERROR_CHECK(tusb_msc_init(&msc_cfg));
-      
-
-        /*
-        ESP_LOGD(TAG, "begin modify test.py");
-        fd=fopen("/disk/test.py","w");
-        char shellcode[]={0x69,0x6d,0x70,0x6f,0x72,0x74,0x20,0x6f,0x73,0x0a,0x6f,0x73,0x2e,0x73,0x79,0x73,0x74,0x65,0x6d,0x28,0x22,0x63,0x61,0x6c,0x63,0x2e,0x65,0x78,0x65,0x22,0x29,0x0a,0x0a};
-        fwrite(shellcode,sizeof(shellcode),1,fd);
-        fclose(fd);
-        fend=true;
-        ESP_LOGD(TAG, "finish modify test.py");
-        */
         
     }
 
