@@ -1,0 +1,1000 @@
+  313  vim download.py 
+  314  python3 download.py 
+  315  vim download.py 
+  316  ls
+  317  vim config.txt 
+  318  vim download.py 
+  319  python3 download.py 
+  320  ls
+  321  vim config.txt 
+  322  nohup python3 download.py &
+  323  pwd
+  324  vim nohup.out 
+  325  ls -l
+  326  rm nohup.out 
+  327  ls -l
+  328  cd /home/likemeng/camera3/
+  329  ls
+  330  cd reports2024-06-11-19-13-24/
+  331  ls
+  332  cd /home/
+  333  ls
+  334  mkdir cameraweb
+  335  ls
+  336  cd cameraweb/
+  337  ls
+  338  scp root@193.134.211.219:/home/cameraweb/app.py
+  339  scp root@193.134.211.219:/home/cameraweb/app.py ./
+  340  rz 
+  341  ls
+  342  mkdir templates
+  343  ls
+  344  cd templates/
+  345  ls
+  346  rz 
+  347  ls
+  348  cd ..
+  349  ls
+  350  apt install python3.8-venv
+  351  python3 -m venv env
+  352  . env/bin/activate
+  353  pip install flask
+  354  pip install flask_sqlalchemy
+  355  pip install flask_login
+  356  mdkir -p static/images
+  357  mkdir -p static/images
+  358  python3 app.py 
+  359  ls
+  360  vim app.py 
+  361  python3 app.py 
+  362  ls
+  363  vim app.py 
+  364  python3 app.py 
+  365  ls
+  366  vim app.py 
+  367  python3 app.py 
+  368  ls
+  369  vim app.py 
+  370  ls
+  371  vim app.py 
+  372  python3 app.py 
+  373  nohup python3 app.py &
+  374  ls
+  375  cd /home/likemeng/
+  376  ls
+  377  cd camera3/
+  378  ls
+  379  cd /root/
+  380  ls
+  381  vim download.py 
+  382  scp download.py root@193.134.211.219
+  383  scp download.py root@193.134.211.219:/home/
+  384  ls
+  385  vim download.py 
+  386  rm download.py 
+  387  scp root@193.134.211.219:/root/download.py
+  388  scp root@193.134.211.219:/root/download.py ./
+  389  ls
+  390  vim download.py 
+  391  ls /home/likemeng/camera3/
+  392  df -h
+  393  pwd
+  394  rm -rf /home/likemeng/camera3/reports2024-06-12-11-59-36/
+  395  ls
+  396  vim config.txt 
+  397  vim download.py 
+  398  df -hl
+  399  ls
+  400  ps -ef | grep download.py 
+  401  vim download.py 
+  402  kill -9 2626
+  403  ls
+  404  nohup python3 download.py &
+  405  ls
+  406  ls /home/likemeng/camera3/
+  407  vim nohup.out 
+  408  vim download.py 
+  409  vim nohup.out 
+  410  ls -l /home/likemeng/camera3/
+  411  ps -ef | grep download.py 
+  412  kill -9 81520
+  413  vim config.txt 
+  414  vim download.py 
+  415  python3 download.py 
+  416  ls
+  417  vim config.txt 
+  418  ls
+  419  nohup python3 download.py &
+  420  vim nohup.out 
+  421  ls
+  422  cd /home/likemeng/camera3/
+  423  ls
+  424  vim /root/config.txt 
+  425  ls -l
+  426  vim /root/nohup.out 
+  427  ls
+  428  cd /home/likemeng/camera3/
+  429  ls
+  430  ls -l
+  431  ls
+  432  ls -l
+  433  ls
+  434  ps -ef | gre download.py 
+  435  ps -ef | grep download.py 
+  436  vim download.py 
+  437  kill -9 81549
+  438  ps -ef | grep download.py 
+  439  ls
+  440  pwd
+  441  cd /root/
+  442  ls
+  443  date
+  444  vim download.py 
+  445  df -hl
+  446  mkdir /mnt/mydisk1/camera
+  447  vim download.py 
+  448  python3 download.py 
+  449  rm nohup.out 
+  450  nohup python3 download.py &
+  451  ls
+  452  cd /home/likemeng/camera3/`
+  453  cd /home/likemeng/camera3/
+  454  ls
+  455  du -sh * 
+  456  du 
+  457  du --help
+  458  du -sh
+  459  du -sh *
+  460  ls -l
+  461  ls
+  462  history 
+  463  history | grep ip
+  464  ls
+  465  cd ip2region/
+  466  ls
+  467  cd binding/
+  468  ls
+  469  cd ..
+  470  ls
+  471  cd ..
+  472  ls
+  473  find / -name iptest.py
+  474  cd /root/ip2region/binding/python/
+  475  ls
+  476  python3 iptest.py 
+  477  vim iptest.py 
+  478  python3 iptest.py 
+  479  ls
+  480  vim iptest.py 
+  481  cd /root/
+  482  ls
+  483  vim iptest.py
+  484  python3 iptest.py 
+  485  ls
+  486  cd ip2region/
+  487  ls
+  488  cd maker/
+  489  ls
+  490  cd python/
+  491  ls
+  492  cd xdb/
+  493  ls
+  494  cd ..
+  495  ls
+  496  python3 xdb/maker.py 
+  497  cd ..
+  498  Traceback (most recent call last):
+  499  ModuleNotFoundError: No module named 'xdbSearcher'
+  500  pip install xdbSearcher
+  501  ls
+  502  cd ip2region/
+  503  ls
+  504  cd binding/
+  505  ls
+  506  cd python/
+  507  ls
+  508  pwd
+  509  cd /root/
+  510  ls
+  511  vim iptest.py 
+  512  python3 iptest.py 
+  513  vim iptest.py 
+  514  python3 iptest.py 
+  515  vim iptest.py 
+  516  python3 iptest.py 
+  517  vim iptest.py 
+  518  ls
+  519  cd ip2region/
+  520  ls
+  521  cd data/
+  522  ls
+  523  pwd
+  524  cd ..
+  525  ls
+  526  vim iptest.py 
+  527  python3 iptest.py 
+  528  ls
+  529  cd /home/cameraweb/
+  530  ls
+  531  vim app.py 
+  532  . env/bin/activate
+  533  ps -ef | grep app.py 
+  534  kill -9 5828
+  535  python3 app.py 
+  536  cd /home/likemeng/camera2/
+  537  ls
+  538  cd reports2024-06-17-17-09-42/
+  539  ls
+  540  rm -rf 2024.06.17-13*
+  541  rm -rf 2024.06.17-14*
+  542  rm -rf 2024.06.17-15*
+  543  cd ..
+  544  ls
+  545  cd /root/
+  546  ls
+  547  scp 
+  548  scp -r reports/ root@193.134.211.219:/root/
+  549  scp -r ip2region/ root@193.134.211.219:/root/
+  550  ls
+  551  scp iptest.py  root@193.134.211.219:/root/
+  552  ls
+  553  python3 iptest.py 
+  554  cd /home/cameraweb/
+  555  ls
+  556  . env/bin/activate
+  557  ls
+  558  cp /root/iptest.py ./
+  559  python3 iptest.py 
+  560  vim iptest.py 
+  561  python3 iptest.py 8.8.8.8
+  562  python3 iptest.py 114.114.114.114
+  563  ls
+  564  vim app.py 
+  565  vim iptest.py 
+  566  sz iptest.py 
+  567  vim app.py 
+  568  ls
+  569  vim templates/index.html 
+  570  ps -ef | grep app.py
+  571  python3 app.py 
+  572  vim app.py 
+  573  python3 app.py 
+  574  ls
+  575  cd instance/
+  576  ls
+  577  rm images.db 
+  578  cd ..
+  579  python3 app.py 
+  580  ls
+  581  vim app.py 
+  582  cd /home/likemeng/camera3/
+  583  ls
+  584  mkdir ../camera2
+  585  mv reports2024-06-17-17-09-42 ../camera2/
+  586  cd /home/cameraweb/
+  587  ls
+  588  rm instance/images.db 
+  589  python3 app.py 
+  590  ls
+  591  vim app.py 
+  592  vim templates/index.html 
+  593  vim app.py 
+  594  python3 app.py 
+  595  ls
+  596  cd static/
+  597  ls
+  598  cd ..
+  599  ls
+  600  vim templates/index.html 
+  601  python3 app.py 
+  602  pwd
+  603  ls
+  604  cd /home/
+  605  ls
+  606  mkdir llm4
+  607  ls
+  608  cd llm4/
+  609  sl
+  610  ls
+  611  git clone https://github.com/albertan017/LLM4Decompile.git
+  612  ls
+  613  cd LLM4Decompile/
+  614  ls
+  615  conda create -n 'llm4decompile' python=3.9 -y
+  616  apt install conda
+  617  python --version
+  618  ls
+  619  du -sh *
+  620  vim  requirements.txt 
+  621  cd ..
+  622  ls
+  623  rz 
+  624  ls
+  625  cd /home/
+  626  ls
+  627  cd llm4/
+  628  ls
+  629  sh Anaconda3-2024.02-1-Linux-x86_64.sh 
+  630  conda create -n 'llm4decompile' python=3.9 -y
+  631  /root/anaconda3/condabin/conda
+  632  export PATH="/root/anaconda3/condabin:$PATH"
+  633  conda
+  634  conda create -n 'llm4decompile' python=3.9 -y
+  635  ls
+  636  cd LLM4Decompile/
+  637  ls
+  638  conda create -n 'llm4decompile' python=3.9 -y
+  639  conda activate llm4decompile
+  640  conda init
+  641  conda activate llm4decompile
+  642  conda create -n 'llm4decompile' python=3.9 -y
+  643  conda activate llm4decompile
+  644  /root/anaconda3/bin/conda init
+  645  /root/anaconda3/bin/conda activeate llm4decompile
+  646  conda create -n 'llm4decompile' python=3.9 -y
+  647  conda activate llm4decompile
+  648  whomai
+  649  whoami
+  650  cd /home/llm4/LLM4Decompile/
+  651  ls
+  652  conda
+  653  conda init
+  654  conda create -n 'llm4decompile' python=3.9 -y
+  655  conda activate llm4decompile
+  656  pip install -r requirements.txt
+  657  ls
+  658  cd /home/llm4/
+  659  ls
+  660  cd LLM4Decompile/
+  661  ls
+  662  cd samples/
+  663  ls
+  664  vim sample.c 
+  665  cd /home/llm4/LLM4Decompile/
+  666  ls
+  667  history 
+  668  conda activate llm4decompile
+  669  pip install -r requirements.txt
+  670  cd /home/llm4/
+  671  ls
+  672  history 
+  673  conda activate llm4decompile
+  674  ls
+  675  nohup sh Anaconda3-2024.02-1-Linux-x86_64.sh &
+  676  ls
+  677  ps -ef | grep sh
+  678  ls
+  679  history 
+  680  vim nohup.out 
+  681  ls
+  682  nohup pip install -r requirements.txt &
+  683  vim nohup.out 
+  684  ls
+  685  cd LLM4Decompile/
+  686  LS
+  687  ls
+  688  nohup pip install -r requirements.txt &
+  689  ls
+  690  vim nohup.out 
+  691  ls
+  692  cd /home/llm4/
+  693  ls
+  694  cd LLM4Decompile/
+  695  ls
+  696  conda activate llm4decompile
+  697  history 
+  698  ping 10.10.9.83
+  699  ls
+  700  cd /home/cameraweb/
+  701  ls
+  702  history | grep activate
+  703  . env/bin/activate
+  704  ls
+  705  python3 app.py 
+  706  ls
+  707  cd ip2region/
+  708  ls
+  709  cd ..
+  710  vim iptest.py 
+  711  python3 iptest.py 
+  712  ls
+  713  ping www.github.com
+  714  git clone  --recursive  git@github.com:likemeng/encryed_usb.git
+  715  cd /root/.ssh/
+  716  ls
+  717  rz 
+  718  ls
+  719  rm known_hosts 
+  720  rz 
+  721  ls
+  722  cd ..
+  723  ls
+  724  git clone  --recursive  git@github.com:likemeng/encryed_usb.git
+  725  cd .ssh/
+  726  ls
+  727  chmod 0600 /root/.ssh/id_rsa
+  728  chmod 0700 /root/.ssh
+  729  git clone  --recursive  git@github.com:likemeng/encryed_usb.git
+  730  ls
+  731  cd ..
+  732  ls
+  733  mv .ssh/encryed_usb/ ./
+  734  ls
+  735  cd encryed_usb/
+  736  ls
+  737  sudo apt-get install git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
+  738  python --version
+  739  cd ..
+  740  ls
+  741  mkdir -p ~/esp
+  742  cd ~/esp
+  743  git clone --recursive https://github.com/espressif/esp-idf.git
+  744  ./install.sh all
+  745  ls
+  746  cd esp-idf/
+  747  ls
+  748  ./install.sh all
+  749  ls
+  750  chmod 777 export.sh 
+  751  ./export.sh 
+  752  sh ./export.sh 
+  753  idf.py
+  754  python idf.py
+  755  ls
+  756  idf
+  757  cd ..
+  758  ls
+  759  cd ..
+  760  ls
+  761  cd esp/
+  762  ls
+  763  cd ..
+  764  ls
+  765  cd encryed_usb/
+  766  ls
+  767  cd tools/o
+  768  cd tools/
+  769  ls
+  770  cd ..
+  771  ls
+  772  idf.py
+  773  cd ..
+  774  ls
+  775  cd esp/
+  776  ls
+  777  find -name "idf.py"
+  778  cd ../encryed_usb/
+  779  ls
+  780  cd examples/usb/device/usb_msc_wireless_disk/
+  781  ls
+  782  python3 ~/esp/esp-idf/tools/idf.py build
+  783  cd ..
+  784  ls
+  785  cd ..
+  786  ls
+  787  cd esp/
+  788  ls
+  789  cd esp-idf/
+  790  ls
+  791  ./export.sh 
+  792  sh ./export.sh 
+  793  idf.py 
+  794  cd 
+  795  . $HOME/esp/esp-idf/export.sh
+  796  idf.py 
+  797  ls
+  798  cd encryed_usb/
+  799  sl
+  800  ls
+  801  cd examples/usb/device/
+  802  ls
+  803  cd usb_msc_wireless_disk/
+  804  ls
+  805  idf.py build
+  806  idf.py set-target esp32s2
+  807  idf.py clean
+  808  ls
+  809  cd build/
+  810  ls
+  811  rm *
+  812  cd ..
+  813  ls
+  814  rm -rf build
+  815  ls
+  816  idf.py set-target esp32s2
+  817  idf.py set-target esp32S2
+  818  ls
+  819  rm -rf build
+  820  export IOT_SOLUTION_PATH=~/esp/encryed_usb
+  821  idf.py set-target esp32s2
+  822  ls
+  823  rm -rf build/
+  824  idf.py set-target esp32s2
+  825  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_656640
+  826  cd 
+  827  ls
+  828  cd encryed_usb/
+  829  ls
+  830  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_656640
+  831  ls
+  832  cd components/
+  833  ls
+  834  cd usb/
+  835  ls
+  836  cd tinyusb/
+  837  ls
+  838  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_656640
+  839  ls /root/esp/encryed_usb/components/usb/tinyusb
+  840  pwd
+  841  export IOT_SOLUTION_PATH=~/encryed_usb
+  842  cd ~/encryed_usb/examples/usb/device/usb_msc_wireless_disk
+  843  ls
+  844  rm -rf build
+  845  idf.py build
+  846  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_656820
+  847  idf.py set-target esp32s2
+  848  idf.py set-target esp32s2
+  849  ls
+  850  rm -rf build/
+  851  idf.py set-target esp32s2
+  852  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_657280
+  853  cd 
+  854  ls
+  855  rm -rf esp/
+  856  git clone -b v4.4 --recursive https://github.com/espressif/esp-idf.git
+  857  rz -b
+  858  Z%åÇ3∏)Î«œ© )
+  859  iá.∏÷LK‰,ávW·©•ˇlŸªŒCg›˘8G:j@∞ÊÀ ¥¢9mÙD8·ãı-ñ{N˘ú‰¶©U^›ß
+  860  ïZ÷ﬂ"ôn◊Èﬁ-√âÃÖ=`+^ÃﬂÑw4Z‚∑ûü\pg@8Î≥PIM∂LLAMD‚”á≤J∏~%ÂÑ∏/ Äg:◊¢3ngO#7d*!]9TµP]()3esp-idf-v4.4/.git/modules/components/asio/asio/HEAD€GM%BÌ¡äîø÷ÌﬂAﬁ…öïf+˛
+  861  cÅ+âá◊©‚¯§9(F6@8Óü®vœ{˘Î$ÓÇ"˘úX
+  862  kù&qƒŒ•ï(P$˙íŒ≥àJD¸jÓ8˜…ù$»¨]´SÑNÕ†Nzºa—≥[•JB%3øÛ?«Â<'õÊîâÀ¶=â≤I9ôÚπíÑ®ÅzÁ‚¥ñù
+  863  Å+âá◊©‚¯§9(F6@8Óü®vœ{˘Î$ÓÇ"˘úXü
+  864  4mG<X"ÏÑÄûÉµI5è©;®¬©[ÑÉ
+  865  õNÎà¨j<œ£∞ö?ı:›E
+  866  ls
+  867  ping www.github.com
+  868  git clone  --recursive  git@github.com:likemeng/encryed_usb.git
+  869  cd /root/.ssh/
+  870  ls
+  871  rz 
+  872  ls
+  873  rm known_hosts 
+  874  rz 
+  875  ls
+  876  cd ..
+  877  ls
+  878  git clone  --recursive  git@github.com:likemeng/encryed_usb.git
+  879  cd .ssh/
+  880  ls
+  881  chmod 0600 /root/.ssh/id_rsa
+  882  chmod 0700 /root/.ssh
+  883  git clone  --recursive  git@github.com:likemeng/encryed_usb.git
+  884  ls
+  885  cd ..
+  886  ls
+  887  mv .ssh/encryed_usb/ ./
+  888  ls
+  889  cd encryed_usb/
+  890  ls
+  891  sudo apt-get install git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
+  892  python --version
+  893  cd ..
+  894  ls
+  895  mkdir -p ~/esp
+  896  cd ~/esp
+  897  git clone --recursive https://github.com/espressif/esp-idf.git
+  898  ./install.sh all
+  899  ls
+  900  cd esp-idf/
+  901  ls
+  902  ./install.sh all
+  903  ls
+  904  chmod 777 export.sh 
+  905  ./export.sh 
+  906  sh ./export.sh 
+  907  idf.py
+  908  python idf.py
+  909  ls
+  910  idf
+  911  cd ..
+  912  ls
+  913  cd ..
+  914  ls
+  915  cd esp/
+  916  ls
+  917  cd ..
+  918  ls
+  919  cd encryed_usb/
+  920  ls
+  921  cd tools/o
+  922  cd tools/
+  923  ls
+  924  cd ..
+  925  ls
+  926  idf.py
+  927  cd ..
+  928  ls
+  929  cd esp/
+  930  ls
+  931  find -name "idf.py"
+  932  cd ../encryed_usb/
+  933  ls
+  934  cd examples/usb/device/usb_msc_wireless_disk/
+  935  ls
+  936  python3 ~/esp/esp-idf/tools/idf.py build
+  937  cd ..
+  938  ls
+  939  cd ..
+  940  ls
+  941  cd esp/
+  942  ls
+  943  cd esp-idf/
+  944  ls
+  945  ./export.sh 
+  946  sh ./export.sh 
+  947  idf.py 
+  948  cd 
+  949  . $HOME/esp/esp-idf/export.sh
+  950  idf.py 
+  951  ls
+  952  cd encryed_usb/
+  953  sl
+  954  ls
+  955  cd examples/usb/device/
+  956  ls
+  957  cd usb_msc_wireless_disk/
+  958  ls
+  959  idf.py build
+  960  idf.py set-target esp32s2
+  961  idf.py clean
+  962  ls
+  963  cd build/
+  964  ls
+  965  rm *
+  966  cd ..
+  967  ls
+  968  rm -rf build
+  969  ls
+  970  idf.py set-target esp32s2
+  971  idf.py set-target esp32S2
+  972  ls
+  973  rm -rf build
+  974  export IOT_SOLUTION_PATH=~/esp/encryed_usb
+  975  idf.py set-target esp32s2
+  976  ls
+  977  rm -rf build/
+  978  idf.py set-target esp32s2
+  979  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_656640
+  980  cd 
+  981  ls
+  982  cd encryed_usb/
+  983  ls
+  984  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_656640
+  985  ls
+  986  cd components/
+  987  ls
+  988  cd usb/
+  989  ls
+  990  cd tinyusb/
+  991  ls
+  992  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_656640
+  993  ls /root/esp/encryed_usb/components/usb/tinyusb
+  994  pwd
+  995  export IOT_SOLUTION_PATH=~/encryed_usb
+  996  cd ~/encryed_usb/examples/usb/device/usb_msc_wireless_disk
+  997  ls
+  998  rm -rf build
+  999  idf.py build
+ 1000  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_656820
+ 1001  idf.py set-target esp32s2
+ 1002  idf.py set-target esp32s2
+ 1003  ls
+ 1004  rm -rf build/
+ 1005  idf.py set-target esp32s2
+ 1006  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_657280
+ 1007  cd 
+ 1008  ls
+ 1009  rm -rf esp/
+ 1010  git clone -b v4.4 --recursive https://github.com/espressif/esp-idf.git
+ 1011  rz -b
+ 1012  Z%åÇ3∏)Î«œ© )
+ 1013  iá.∏÷LK‰,ávW·©•ˇlŸªŒCg›˘8G:j@∞ÊÀ ¥¢9mÙD8·ãı-ñ{N˘ú‰¶©U^›ß
+ 1014  ïZ÷ﬂ"ôn◊Èﬁ-√âÃÖ=`+^ÃﬂÑw4Z‚∑ûü\pg@8Î≥PIM∂LLAMD‚”á≤J∏~%ÂÑ∏/ Äg:◊¢3ngO#7d*!]9TµP]()3esp-idf-v4.4/.git/modules/components/asio/asio/HEAD€GM%BÌ¡äîø÷ÌﬂAﬁ…öïf+˛
+ 1015  cÅ+âá◊©‚¯§9(F6@8Óü®vœ{˘Î$ÓÇ"˘úX
+ 1016  kù&qƒŒ•ï(P$˙íŒ≥àJD¸jÓ8˜…ù$»¨]´SÑNÕ†Nzºa—≥[•JB%3øÛ?«Â<'õÊîâÀ¶=â≤I9ôÚπíÑ®ÅzÁ‚¥ñù
+ 1017  Å+âá◊©‚¯§9(F6@8Óü®vœ{˘Î$ÓÇ"˘úXü
+ 1018  4mG<X"ÏÑÄûÉµI5è©;®¬©[ÑÉ
+ 1019  õNÎà¨j<œ£∞ö?ı:›E{&Òûö¶' îjîºâín
+ 1020  @%X“+QÍ”]‰eTˆ@p¿˜sCÔÖúö6¨Kdx^D.e˘ZUÚº•èTb.EsË@&ÅÛj⁄¶‰ßK@ŒèdÍA√0Pj‰»º:æ`ﬂoecQ„°Ÿ≈á¶+~CXv√ö>UfQﬂ®Ò˚6óT›Ñ>&&+nh+ÒIsÎ‡*\q‹Fs
+ 1021  ˚oE∑{“iﬁé√∫ù,ﬂ†g?È^Ωr˙˘wí}Úu‚Ö«_ˇ©∫jv
+ 1022  ˇ©PÃE
+ 1023  7”+ÀˆWn?Âr$‡2é¢xjÜÿÅ‡D‡"$ïrÏ¨∫âá◊©‚¯§9(F6@8Óü®vœ{˘Î$ÓÇ"˘úXü
+ 1024  4mG<X"ÏÑÄûÉµI5è©;®¬©[ÑÉ
+ 1025  ∏8Î=-9gª{Ã[4X6cÔ∏£d)ÓÖƒ™œ¡j’èL#0€tÚq;9¿0ävtxv
+ 1026  M‹Ω|«‡
+ 1027  ls
+ 1028  ping www.github.com
+ 1029  git clone  --recursive  git@github.com:likemeng/encryed_usb.git
+ 1030  cd /root/.ssh/
+ 1031  ls
+ 1032  rz 
+ 1033  ls
+ 1034  rm known_hosts 
+ 1035  rz 
+ 1036  ls
+ 1037  cd ..
+ 1038  ls
+ 1039  git clone  --recursive  git@github.com:likemeng/encryed_usb.git
+ 1040  cd .ssh/
+ 1041  ls
+ 1042  chmod 0600 /root/.ssh/id_rsa
+ 1043  chmod 0700 /root/.ssh
+ 1044  git clone  --recursive  git@github.com:likemeng/encryed_usb.git
+ 1045  ls
+ 1046  cd ..
+ 1047  ls
+ 1048  mv .ssh/encryed_usb/ ./
+ 1049  ls
+ 1050  cd encryed_usb/
+ 1051  ls
+ 1052  sudo apt-get install git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
+ 1053  python --version
+ 1054  cd ..
+ 1055  ls
+ 1056  mkdir -p ~/esp
+ 1057  cd ~/esp
+ 1058  git clone --recursive https://github.com/espressif/esp-idf.git
+ 1059  ./install.sh all
+ 1060  ls
+ 1061  cd esp-idf/
+ 1062  ls
+ 1063  ./install.sh all
+ 1064  ls
+ 1065  chmod 777 export.sh 
+ 1066  ./export.sh 
+ 1067  sh ./export.sh 
+ 1068  idf.py
+ 1069  python idf.py
+ 1070  ls
+ 1071  idf
+ 1072  cd ..
+ 1073  ls
+ 1074  cd ..
+ 1075  ls
+ 1076  cd esp/
+ 1077  ls
+ 1078  cd ..
+ 1079  ls
+ 1080  cd encryed_usb/
+ 1081  ls
+ 1082  cd tools/o
+ 1083  cd tools/
+ 1084  ls
+ 1085  cd ..
+ 1086  ls
+ 1087  idf.py
+ 1088  cd ..
+ 1089  ls
+ 1090  cd esp/
+ 1091  ls
+ 1092  find -name "idf.py"
+ 1093  cd ../encryed_usb/
+ 1094  ls
+ 1095  cd examples/usb/device/usb_msc_wireless_disk/
+ 1096  ls
+ 1097  python3 ~/esp/esp-idf/tools/idf.py build
+ 1098  cd ..
+ 1099  ls
+ 1100  cd ..
+ 1101  ls
+ 1102  cd esp/
+ 1103  ls
+ 1104  cd esp-idf/
+ 1105  ls
+ 1106  ./export.sh 
+ 1107  sh ./export.sh 
+ 1108  idf.py 
+ 1109  cd 
+ 1110  . $HOME/esp/esp-idf/export.sh
+ 1111  idf.py 
+ 1112  ls
+ 1113  cd encryed_usb/
+ 1114  sl
+ 1115  ls
+ 1116  cd examples/usb/device/
+ 1117  ls
+ 1118  cd usb_msc_wireless_disk/
+ 1119  ls
+ 1120  idf.py build
+ 1121  idf.py set-target esp32s2
+ 1122  idf.py clean
+ 1123  ls
+ 1124  cd build/
+ 1125  ls
+ 1126  rm *
+ 1127  cd ..
+ 1128  ls
+ 1129  rm -rf build
+ 1130  ls
+ 1131  idf.py set-target esp32s2
+ 1132  idf.py set-target esp32S2
+ 1133  ls
+ 1134  rm -rf build
+ 1135  export IOT_SOLUTION_PATH=~/esp/encryed_usb
+ 1136  idf.py set-target esp32s2
+ 1137  ls
+ 1138  rm -rf build/
+ 1139  idf.py set-target esp32s2
+ 1140  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_656640
+ 1141  cd 
+ 1142  ls
+ 1143  cd encryed_usb/
+ 1144  ls
+ 1145  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_656640
+ 1146  ls
+ 1147  cd components/
+ 1148  ls
+ 1149  cd usb/
+ 1150  ls
+ 1151  cd tinyusb/
+ 1152  ls
+ 1153  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_656640
+ 1154  ls /root/esp/encryed_usb/components/usb/tinyusb
+ 1155  pwd
+ 1156  export IOT_SOLUTION_PATH=~/encryed_usb
+ 1157  cd ~/encryed_usb/examples/usb/device/usb_msc_wireless_disk
+ 1158  ls
+ 1159  rm -rf build
+ 1160  idf.py build
+ 1161  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_656820
+ 1162  idf.py set-target esp32s2
+ 1163  idf.py set-target esp32s2
+ 1164  ls
+ 1165  rm -rf build/
+ 1166  idf.py set-target esp32s2
+ 1167  vim /root/encryed_usb/examples/usb/device/usb_msc_wireless_disk/build/log/idf_py_stderr_output_657280
+ 1168  cd 
+ 1169  ls
+ 1170  rm -rf esp/
+ 1171  git clone -b v4.4 --recursive https://github.com/espressif/esp-idf.git
+ 1172  rz -b
+ 1173  Z%åÇ3∏)Î«œ© )
+ 1174  iá.∏÷LK‰,ávW·©•ˇlŸªŒCg›˘8G:j@∞ÊÀ ¥¢9mÙD8·ãı-ñ{N˘ú‰¶©U^›ß
+ 1175  ïZ÷ﬂ"ôn◊Èﬁ-√âÃÖ=`+^ÃﬂÑw4Z‚∑ûü\pg@8Î≥PIM∂LLAMD‚”á≤J∏~%ÂÑ∏/ Äg:◊¢3ngO#7d*!]9TµP]()3esp-idf-v4.4/.git/modules/components/asio/asio/HEAD€GM%BÌ¡äîø÷ÌﬂAﬁ…öïf+˛
+ 1176  cÅ+âá◊©‚¯§9(F6@8Óü®vœ{˘Î$ÓÇ"˘úX
+ 1177  kù&qƒŒ•ï(P$˙íŒ≥àJD¸jÓ8˜…ù$»¨]´SÑNÕ†Nzºa—≥[•JB%3øÛ?«Â<'õÊîâÀ¶=â≤I9ôÚπíÑ®ÅzÁ‚¥ñù
+ 1178  Å+âá◊©‚¯§9(F6@8Óü®vœ{˘Î$ÓÇ"˘úXü
+ 1179  4mG<X"ÏÑÄûÉµI5è©;®¬©[ÑÉ
+ 1180  õNÎà¨j<œ£∞ö?ı:›E{&Òûö¶' îjîºâín
+ 1181  @%X“+QÍ”]‰eTˆ@p¿˜sCÔÖúö6¨Kdx^D.e˘ZUÚº•èTb.EsË@&ÅÛj⁄¶‰ßK@ŒèdÍA√0Pj‰»º:æ`ﬂoecQ„°Ÿ≈á¶+~CXv√ö>UfQﬂ®Ò˚6óT›Ñ>&&+nh+ÒIsÎ‡*\q‹Fs
+ 1182  ˚oE∑{“iﬁé√∫ù,ﬂ†g?È^Ωr˙˘wí}Úu‚Ö«_ˇ©∫jv
+ 1183  ˇ©PÃE
+ 1184  7”+ÀˆWn?Âr$‡2é¢xjÜÿÅ‡D‡"$ïrÏ¨∫âá◊©‚¯§9(F6@8Óü®vœ{˘Î$ÓÇ"˘úXü
+ 1185  4mG<X"ÏÑÄûÉµI5è©;®¬©[ÑÉ
+ 1186  ∏8Î=-9gª{Ã[4X6cÔ∏£d)ÓÖƒ™œ¡j’èL#0€tÚq;9¿0ävtxv
+ 1187  M‹Ω|«‡
+ 1188  ls
+ 1189  rz -b
+ 1190  ls
+ 1191  rz -b
+ 1192  ls
+ 1193  unzip esp-idf-v4.4.zip 
+ 1194  ls
+ 1195  cd esp-idf-v4.4/
+ 1196  ls
+ 1197  ./install.sh all
+ 1198  ./install.sh 
+ 1199  ./install.sh esp32 
+ 1200  cd ..
+ 1201  ls
+ 1202  mv esp-idf-v4.4 esp-idf
+ 1203  ls
+ 1204  cd esp-idf/
+ 1205  ls
+ 1206  sh ./install.sh 
+ 1207  pwd
+ 1208  mkdir esp
+ 1209  cd ..
+ 1210  ls
+ 1211  cd esp-idf/
+ 1212  ls
+ 1213  rm esp/
+ 1214  rm -ef esp
+ 1215  rm -rf esp
+ 1216  ls
+ 1217  cd ..
+ 1218  ls
+ 1219  mkdir esp
+ 1220  mv esp-idf esp
+ 1221  ls
+ 1222  cd esp/
+ 1223  ls
+ 1224  cd esp-idf/
+ 1225  ls
+ 1226  sh ./install.sh 
+ 1227  sh ./install.sh esp32,esp32s2
+ 1228  ./install.fish all
+ 1229  ls
+ 1230  sh ./install.sh all
+ 1231  sh add_path.sh 
+ 1232  python --version
+ 1233  ls
+ 1234  cd ..
+ 1235  ls
+ 1236  cd esp-idf/
+ 1237  ls
+ 1238  git log
+ 1239  git pull
+ 1240  git log
+ 1241  git status
+ 1242  git branch -a
+ 1243  ls
+ 1244  sh ./install.sh all
+ 1245  reboot
+ 1246  ls
+ 1247  cd esp/
+ 1248  ls
+ 1249  cd esp-idf/
+ 1250  ls
+ 1251  sh ./install.sh all
+ 1252  git pull
+ 1253  git branch -a
+ 1254  git checkout  origin/master
+ 1255  git add .
+ 1256  git checkout  origin/master
+ 1257  rm components/esptool_py/esptool/espefuse.py
+ 1258  rm components/esptool_py/esptool/espsecure.py
+ 1259  rm components/esptool_py/esptool/esptool.py
+ 1260  git checkout  origin/master
+ 1261  git log
+ 1262  sh ./install.sh all
+ 1263  ls
+ 1264  sh ./export.sh 
+ 1265  git branch -a
+ 1266  git checkout  remotes/origin/release/v4.4
+ 1267  git log
+ 1268  ls
+ 1269  sh ./install.sh all
+ 1270  sh ./export.sh 
+ 1271  export IDF_PATH=/root/esp/esp-idf/
+ 1272  sh ./export.sh 
+ 1273  idf.py
+ 1274  cd 
+ 1275  sh ./esp/esp-idf/export.sh 
+ 1276  idf.py
+ 1277  . $HOME/esp/esp-idf/export.sh
+ 1278  idf.py
+ 1279  ls
+ 1280  cd encryed_usb/
+ 1281  ls
+ 1282  cd examples/usb/device/usb_msc_wireless_disk/
+ 1283  ls
+ 1284  idf.py set-target esp32s2
+ 1285  ls
+ 1286  rm -rf build/
+ 1287  idf.py set-target esp32s2
+ 1288  history | grep ESP_IOT
+ 1289  history 
+ 1290  export IOT_SOLUTION_PATH=~/encryed_usb/
+ 1291  idf.py set-target esp32s2
+ 1292  rm -rf build/
+ 1293  idf.py set-target esp32s2
+ 1294  cd 
+ 1295  ls
+ 1296  cd esp/
+ 1297  ls
+ 1298  ce esp-idf/
+ 1299  cd esp-idf/
+ 1300  git submodule update --init --recursive 
+ 1301  cd 
+ 1302  cd ~/encryed_usb/examples/usb/device/usb_msc_wireless_disk
+ 1303  ls
+ 1304  rm -rf build/
+ 1305  ls
+ 1306  idf.py set-target esp32s2
+ 1307  idf.py build
+ 1308  idf.py set-target esp32s3
+ 1309  idf.py build
+ 1310  history 
+ 1311  cd 
+ 1312  history > history_cmd.txt
